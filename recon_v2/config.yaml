@@ -1,0 +1,44 @@
+# Recon & Enumeration Toolkit v2.0 — Configuration File
+# Copy this file and edit as needed.
+# CLI flags always override config file values.
+
+# ── Target ───────────────────────────────────────────────────────────────────
+# target: example.com           # Override with -t on CLI
+
+# ── Module selection ─────────────────────────────────────────────────────────
+modules:
+  - dns
+  - ports
+  - subs
+  - web
+  - whois
+  - banners
+
+# ── Port scanning ─────────────────────────────────────────────────────────────
+ports: null                     # null = use built-in top-port list
+                                # Example: "1-1024" or "80,443,8080"
+use_nmap: false
+scan_udp: false
+
+# ── Subdomain enumeration ─────────────────────────────────────────────────────
+wordlist: null                  # null = use built-in wordlist
+passive: false                  # enable crt.sh + Wayback Machine passive recon
+
+# ── Performance ───────────────────────────────────────────────────────────────
+threads: 100
+timeout: 1.5
+
+# ── Stealth / evasion ─────────────────────────────────────────────────────────
+stealth: false                  # Reduce threads to 20, randomize delays
+delay: 0.0                      # Fixed delay (seconds) between probes
+random_delay: false             # Random delay 0.1–1.5s between probes
+
+# ── AI analysis ───────────────────────────────────────────────────────────────
+ai_enabled: false               # set to true to always run AI (same as --ai flag)
+anthropic_api_key: null         # or set ANTHROPIC_API_KEY environment variable
+
+# ── Output ────────────────────────────────────────────────────────────────────
+output: null                    # null = auto-name based on target + timestamp
+                                # Example: "./reports/client" → client.html
+logfile: null                   # null = log to terminal only
+                                # Example: "./logs/recon.log"
