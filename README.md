@@ -138,7 +138,7 @@ pip install -r requirements.txt
 > **Every time you come back**, just activate the venv again (step 3) before running.
 > To stop using the venv: `deactivate`
 
----
+-------------------------------------------------------------------------
 
 ### Option B — Install directly (simpler, but may conflict with system packages)
 
@@ -239,7 +239,7 @@ Available modules:
 | `whois` | WHOIS lookup (domain or IP) |
 | `banners` | Service banner grabbing + CVE hints |
 
----
+-------------------------------------------------------------------------------------------------------------
 
 ## 🍳 Common Scan Recipes
 
